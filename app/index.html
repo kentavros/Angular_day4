@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="MyApp">
+<html ng-app="app">
     <head>
         <script src="../lib/angular/angular.min.js"></script>
         <script src="../lib/angular-ui-router/release/angular-ui-router.min.js"></script>
@@ -7,15 +7,20 @@
         <script src="main.js"></script>
     </head>
     <body>
-        <style>.ng-invalid{color:red}</style>
-        <form name="userInfo">
-            <input type="text" ng-model="info.name" required name="name"><br>
-            <input type="email" ng-model="info.email" required name="email"><br>
-        </form>
-        <div>
-            {{info}}
-        </div>
 
+
+
+        <form name="form" class="css-form" novalidate>
+            <div>
+                <label>
+                Name:
+                <input type="text" ng-model="name" name="name" username />{{name}}</label><br />
+                <span ng-show="form.name.$pending.username">Checking if this name is available...</span>
+                <span ng-show="form.name.$error.username">This username is already taken!</span>
+            </div>
+ 
+              
+        </form>
 
 
 
