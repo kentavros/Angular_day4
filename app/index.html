@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <script src="../lib/angular/angular.min.js"></script>
+        <script src="../lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+        <!-- <link rel="stylesheet" href="style.css"> -->
+    </head>
+    <body>
+        <div ng-controller="Controller" class="box">
+            <a ui-sref="contact" ui-sref-active="active">Contact</a>
+            <a ui-sref="home" ui-sref-active="active">Home</a>
+            <ui-view></ui-view>
+        </div>
+
+    </body>
+    <script src="./main.js"></script>
+    <script src="./config.js"></script>
+    </body>
+</html>
